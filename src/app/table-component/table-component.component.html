@@ -1,0 +1,22 @@
+<table class="table">
+  <thead>
+    <tr>
+      <td>Name</td>
+      <td>English</td>
+      <td>Science</td>
+      <td>Maths</td>
+      <td>Social</td>
+      <td>Total</td>
+    </tr>
+  </thead>
+  <tbody>
+    <app-row-component *ngFor="let student of list.list" [student]="student" (update)="list.calculate();" (delete)="list.delete($event);"></app-row-component>
+    <tr></tr>
+    <app-row-component [student]="list.min" [disableEdit]="true"></app-row-component>
+    <app-row-component [student]="list.max" [disableEdit]="true"></app-row-component>
+    <app-row-component [student]="list.avg" [disableEdit]="true"></app-row-component>
+  </tbody>
+  <tfoot>
+    <button class="btn btn-primary" (click)="list.add()">Add</button>
+  </tfoot>
+</table>

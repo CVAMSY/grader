@@ -1,0 +1,4 @@
+<div [hidden]="editMode"><p (dblclick)="enterEditMode()">{{value}}</p></div>
+<div [hidden]="!editMode"><input type="text" [(ngModel)]="editValue" (keypress)="exitEditMode($event)" autofocus/></div>
+
+

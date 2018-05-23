@@ -1,0 +1,9 @@
+<!--<tr>-->
+<td><app-inline-edit-component [value]="student.name" (update)="student.name = $event;" [disableEdit]="disableEdit"></app-inline-edit-component></td>
+<td><app-inline-edit-component [value]="student.english" (update)="updateSubject('english', $event);" [disableEdit]="disableEdit"></app-inline-edit-component></td>
+<td><app-inline-edit-component [value]="student.science" (update)="updateSubject('science', $event);" [disableEdit]="disableEdit"></app-inline-edit-component></td>
+<td><app-inline-edit-component [value]="student.maths" (update)="updateSubject('maths', $event);" [disableEdit]="disableEdit"></app-inline-edit-component></td>
+<td><app-inline-edit-component [value]="student.social" (update)="updateSubject('social', $event);" [disableEdit]="disableEdit"></app-inline-edit-component></td>
+<td>{{student.total}}</td>
+<td><button class="btn btn-primary" (click)="this.delete.emit(student.id);">Delete</button></td>
+<!--</tr>-->

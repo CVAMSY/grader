@@ -1,0 +1,6 @@
+:host {
+  display: table-row;
+}
+td {
+  height: 40px;
+}
